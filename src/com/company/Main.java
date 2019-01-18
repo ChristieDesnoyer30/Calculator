@@ -57,7 +57,7 @@ public class Main {
                 userChoice2 = scan.nextInt();
                 int result = userChoice1 + userChoice2;
 
-                System.out.println("Multiplying:  " + userChoice1 + " + " + userChoice2 + " = "+ result);
+                System.out.println("Multiplying:  " + userChoice1 + " + " + userChoice2 + " = " + result);
 
                 break;
             case 4:   //divide
@@ -65,10 +65,21 @@ public class Main {
                 userChoice1 = scan.nextInt();
                 System.out.println("Please enter the second number to be evaulated");
                 userChoice2 = scan.nextInt();
+                int dividend = userChoice1 / userChoice2;
+
+                System.out.println("Dividing: "+ userChoice1 + " + " + userChoice2 + " = " + dividend);
 
                 break;
 
             case 5:   //square root
+                System.out.println("Please enter the number to be evaluated");
+
+                userChoice1 = scan.nextInt();
+                
+                double sqrt = Math.sqrt(userChoice1);
+
+                System.out.println("The square root of " + userChoice1 + "equals  "  + sqrt);
+
 
                 break;
 
