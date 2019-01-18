@@ -16,24 +16,23 @@ public class Main {
         boolean continueProgram = true;
 
         System.out.println("Welcome to the calculator! What mathematical operation would you like to perform?");
+
         System.out.println("Enter 1 to add, 2 to subtract, 3 to multiply, 4 to divide and 5 to find the square root");
 
 
         int userChoice = scan.nextInt();
 
-        if (userChoice >= 6 || userChoice <= 0){
+        if (userChoice >= 6 || userChoice <= 0) {
 
             while (userChoice >= 6) {
+
                 System.out.println("Not a valid option.");
+
                 System.out.println("Enter 1 to add, 2 to subtract, 3 to multiply, 4 to divide and 5 to find the square root");
+
                 userChoice = scan.nextInt();
             }
 
-            while (!scan.hasNextInt())
-            {
-                System.out.println("Invalid input\n Type a number 1 - 5:");
-                scan.next();
-            }
         }
 
         do {
@@ -122,11 +121,12 @@ public class Main {
             int userContinue = scan.nextInt();
 
 
-
-
             if (userContinue == 1) {
+
                 continueProgram = true;
+
                 System.out.println("Enter 1 to add, 2 to subtract, 3 to multiply, 4 to divide and 5 to find the square root");
+
                 userChoice = scan.nextInt();
 
             } else {
