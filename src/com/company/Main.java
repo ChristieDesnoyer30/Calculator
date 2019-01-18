@@ -22,11 +22,18 @@ public class Main {
         int userChoice = scan.nextInt();
 
         if (userChoice >= 6 || userChoice <= 0){
-            do {
+
+            while (userChoice >= 6) {
                 System.out.println("Not a valid option.");
                 System.out.println("Enter 1 to add, 2 to subtract, 3 to multiply, 4 to divide and 5 to find the square root");
                 userChoice = scan.nextInt();
-            } while (userChoice >= 6);
+            }
+
+            while (!scan.hasNextInt())
+            {
+                System.out.println("Invalid input\n Type a number 1 - 5:");
+                scan.next();
+            }
         }
 
         do {
