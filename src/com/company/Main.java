@@ -21,7 +21,16 @@ public class Main {
 
         int userChoice = scan.nextInt();
 
+        if (userChoice >= 6 || userChoice <= 0){
+            do {
+                System.out.println("Not a valid option.");
+                System.out.println("Enter 1 to add, 2 to subtract, 3 to multiply, 4 to divide and 5 to find the square root");
+                userChoice = scan.nextInt();
+            } while (userChoice >= 6);
+        }
+
         do {
+
             switch (userChoice) {
 
                 case 1: //add
@@ -100,13 +109,21 @@ public class Main {
 
             }
 
+
             System.out.println("Would you like to perform another calculation? Press 1 for yes and 2 for no.");
 
-            userChoice = scan.nextInt();
+            int userContinue = scan.nextInt();
 
-            if (userChoice == 1) {
+
+
+
+            if (userContinue == 1) {
                 continueProgram = true;
+                System.out.println("Enter 1 to add, 2 to subtract, 3 to multiply, 4 to divide and 5 to find the square root");
+                userChoice = scan.nextInt();
+
             } else {
+
                 continueProgram = false;
             }
 
