@@ -20,20 +20,28 @@ public class Main {
         System.out.println("Enter 1 to add, 2 to subtract, 3 to multiply, 4 to divide and 5 to find the square root");
 
 
-        int userChoice = scan.nextInt();
+        int userChoice;
 
-        if (userChoice >= 6 || userChoice <= 0) {
 
-            while (userChoice >= 6) {
+//            while (userChoice >= 6 || userChoice < 0) {
+//
+//                System.out.println("Not a valid option.");
+//
+//                System.out.println("Enter 1 to add, 2 to subtract, 3 to multiply, 4 to divide and 5 to find the square root");
+//
+//                userChoice = scan.nextInt();
+//            }
 
-                System.out.println("Not a valid option.");
-
-                System.out.println("Enter 1 to add, 2 to subtract, 3 to multiply, 4 to divide and 5 to find the square root");
-
-                userChoice = scan.nextInt();
+        do {
+            System.out.print("Please enter your choice: ");
+            while (!scan.hasNextInt()) {
+                String input = scan.next();
+                System.out.printf("\"%s\" is not a valid number.\n", input);
+                System.out.print("Please enter your choice: ");
             }
+            userChoice = scan.nextInt();
+        } while (userChoice < 0);
 
-        }
 
         do {
 
@@ -41,11 +49,11 @@ public class Main {
 
                 case 1: //add
 
-                    System.out.println("Please enter the first number to be evaluated");
+                    System.out.println("Please enter the first number to add to.");
 
                     int userChoice1 = scan.nextInt();
 
-                    System.out.println("Please enter the second number to be evaulated");
+                    System.out.println("Please enter the second number to add to.");
 
                     int userChoice2 = scan.nextInt();
 
@@ -55,11 +63,11 @@ public class Main {
 
                     break;
                 case 2:  //subtract
-                    System.out.println("Please enter the first number to be evaluated");
+                    System.out.println("Please enter the first number for subtraction");
 
                     userChoice1 = scan.nextInt();
 
-                    System.out.println("Please enter the second number to be evaulated");
+                    System.out.println("Please enter the second number for subtraction");
 
                     userChoice2 = scan.nextInt();
 
@@ -71,11 +79,11 @@ public class Main {
                     break;
 
                 case 3:  //multiply
-                    System.out.println("Please enter the first number to be evaluated");
+                    System.out.println("Please enter the first number to be multiplied");
 
                     userChoice1 = scan.nextInt();
 
-                    System.out.println("Please enter the second number to be evaulated");
+                    System.out.println("Please enter the second number to be multiplied");
 
                     userChoice2 = scan.nextInt();
 
@@ -86,15 +94,15 @@ public class Main {
                     break;
                 case 4:   //divide
 
-                    System.out.println("Please enter the first number to be evaluated");
+                    System.out.println("Please enter the first number for division.");
 
                     userChoice1 = scan.nextInt();
 
-                    System.out.println("Please enter the second number to be evaulated");
+                    System.out.println("Please enter the second number for division");
 
                     userChoice2 = scan.nextInt();
 
-                    int dividend = userChoice1 / userChoice2;
+                    double dividend = userChoice1 / userChoice2;
 
 
                     System.out.println("Dividing: " + userChoice1 + " / " + userChoice2 + " = " + dividend);
@@ -103,7 +111,7 @@ public class Main {
 
                 case 5:   //square root
 
-                    System.out.println("Please enter the number to be evaluated");
+                    System.out.println("Please enter the number to find the square root of.");
 
                     userChoice1 = scan.nextInt();
 
