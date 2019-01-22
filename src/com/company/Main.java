@@ -72,7 +72,7 @@ public class Main {
                     userChoice2 = scan.nextInt();
 
 
-                    int difference = userChoice1 + userChoice2;
+                    int difference = userChoice1 - userChoice2;
 
                     System.out.println("Subtracting: " + userChoice1 + " - " + userChoice2 + " = " + difference);
 
@@ -89,7 +89,7 @@ public class Main {
 
                     int result = userChoice1 * userChoice2;
 
-                    System.out.println("Multiplying:  " + userChoice1 + " + " + userChoice2 + " = " + result);
+                    System.out.println("Multiplying:  " + userChoice1 + " *" + userChoice2 + " = " + result);
 
                     break;
                 case 4:   //divide
