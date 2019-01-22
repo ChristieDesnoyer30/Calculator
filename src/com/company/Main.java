@@ -87,7 +87,7 @@ public class Main {
 
                     userChoice2 = scan.nextInt();
 
-                    int result = userChoice1 + userChoice2;
+                    int result = userChoice1 * userChoice2;
 
                     System.out.println("Multiplying:  " + userChoice1 + " + " + userChoice2 + " = " + result);
 
